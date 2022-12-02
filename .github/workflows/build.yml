@@ -39,7 +39,7 @@ jobs:
         shell: cmd
         run: |
           copy "Bonjour64-installation\SourceDir\dnssd.dll.duplicate1" "iTunes64-installation\SourceDir\iTunes\dnssd.dll" &&^
-          copy "Bonjour64-installation\SourceDir\dnssdX.dll.duplicate1" "iTunes64-installation\SourceDir\iTunes\dnssdX.dll" &&^
+          copy "Bonjour64-installation\SourceDir\dnssdX.dll.duplicate1" "iTunes64-installation\SourceDir\iTunes\dnssdX.dll"
           
       - name: Archive Release
         uses: thedoctor0/zip-release@master
