@@ -1,4 +1,4 @@
-name: tortoisegit-portable-release-actions-workflow
+name: itunes-portable-release-actions-workflow
 on:
   push:
     # Sequence of patterns matched against refs/tags
