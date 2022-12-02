@@ -9,9 +9,9 @@ on:
 jobs:
   build:
     name: Create Release
-    runs-on: windows-2019
+    runs-on: windows-latest
     env:
-      targetZip: tortoisegit-portable-${{ github.ref_name }}.zip
+      targetZip: itunes-portable-${{ github.ref_name }}.zip
     steps:
       - name: installer
         shell: cmd
