@@ -1,6 +1,4 @@
 @echo off
-set PATH=^
-%USERPROFILE%\Downloads\PortableGit\bin
 
 echo %PATH%
 
