@@ -13,6 +13,8 @@ jobs:
     env:
       targetZip: itunes-portable-${{ github.ref_name }}.zip
     steps:
+      - uses: actions/checkout@v3
+      
       - name: installer
         shell: cmd
         run: |
@@ -40,6 +42,9 @@ jobs:
         run: |
           copy "Bonjour64-installation\SourceDir\dnssd.dll.duplicate1" "iTunes64-installation\SourceDir\iTunes\dnssd.dll" &&^
           copy "Bonjour64-installation\SourceDir\dnssdX.dll.duplicate1" "iTunes64-installation\SourceDir\iTunes\dnssdX.dll"
+
+      - shell: cmd
+        run: xcopy /H /Y /C "iTunes.exe.Portable.cmd" "iTunes64-installation\SourceDir\iTunes"
           
       - name: Archive Release
         uses: thedoctor0/zip-release@master
