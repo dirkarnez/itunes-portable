@@ -13,7 +13,7 @@ jobs:
     env:
       targetZip: itunes-portable-${{ github.ref_name }}.zip
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       
       - name: installer
         shell: cmd
@@ -54,7 +54,7 @@ jobs:
           filename: "${{ env.targetZip }}"
           
       - name: Release prebuilt
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.18.0
         with:
           artifacts: "iTunes64-installation/SourceDir/iTunes/${{ env.targetZip }}"
           allowUpdates: true
